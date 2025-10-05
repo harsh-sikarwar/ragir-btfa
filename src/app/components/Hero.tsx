@@ -1,11 +1,11 @@
 import Image from "next/image"
+import Link from "next/link";
 export default function Hero(): React.JSX.Element {
 
   return (
-  <>
-
+<>
+{/* Main Hero Section */}
     <section className="hero_section w-full md:w-[57.5%] flex justify-between flex-col-reverse md:flex-row items-center lg:overflow-hidden pb-[5rem]">
-
     <div className="content mt-[5rem] max-md:text-center">    
     <h1 className="text-[3rem] font-[500]">Are you a <span className="bold italic text-[4.5rem]">Trip Organizer</span></h1>
     <h1 className="text-[3rem] font-[500]">or a <span className="bold italic text-[4.5rem]">Trip Leader</span> </h1>    
@@ -28,29 +28,35 @@ digital partner to build community and maximize growth.</span>
 get lifetime perks of being our Day 1s
 </h2>
 <div className="max-lg:justify-center flex">
-<button className="btn text-[1.5rem] rounded-full font-[500] px-6 py-3 mt-8 poppins"></button>
+    <Link href="/">
+    {/* Intentionaly left empty, content set by css for that gradeint text*/}
+        <button className="btn text-[1.5rem] rounded-full font-[500] px-6 py-3 mt-8 poppins"></button>
+    </Link>
 </div>
 </div>
     </div>
     <div className="image max-md:mt-[7rem] ">
-    <Image src="/hero.png" alt="Hero Image" width={4000} height={2000} className=" z-[-1] md:absolute w-[80%] max-md:mx-auto md:w-[55%] lg:w-[45%] top-40 right-0"/>
+    <Image src="/hero.png" alt="Hero Image in which a looking for destination" width={4000} height={2000} className=" z-[-1] md:absolute w-[80%] max-md:mx-auto md:w-[55%] lg:w-[45%] top-40 right-0"/>
     </div>
     </section>
-    <section className="info_section w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-[5rem]">
+
+{/* Intro Section */}
+    <section className="intro_section w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-[5rem]">
         <div className="img">
-        <Image src="/intro-hero.png" alt="Info Image" width={2412} height={1996} className="w-8/9"/>
+        <Image src="/intro-hero.png" alt="Image showing travellers having fun" width={2412} height={1996} className="w-8/9"/>
         </div>
         <div className="content max-md:text-center">
             <h1 className="text-[4.5rem] font-[700] pb-4 ">What is <span className="grad_txt"> Ragir?</span></h1>
             <h2 className="text-[1.75rem] font-[600] italic sub-txt poppins pt-4">Ragir is India’s first search and discovery
-platform that exclusively lists fixed departure
-group trips.</h2>
+                platform that exclusively lists fixed departure
+                group trips.
+            </h2>
             <p className="text-[1.5rem] font-[400] sub-txt opacity-80 pt-4">
                 Ragir is designed to showcase your group trips, help
-you reach the right audience, and provide actionable
-insights to grow your business.
+                you reach the right audience, and provide actionable
+                insights to grow your business.
             </p>
         </div>
     </section>
-    </> )
-}
+</> 
+)}

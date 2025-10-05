@@ -8,10 +8,9 @@ import React from "react";
  */
 const Card = ({img, heading, listItems}:{img: string, heading: string, listItems: string[]}) => {
   return (
-    // shadow-2xl inset-shadow-xs shadow-[#e4e4e4]
     <div className="card p-6 px-8 rounded-2xl box-shadow ">
       <div className=" flex justify-start items-start">
-        <Image src={img} alt="Card Image" width={1000} height={1000}    className=" align-start w-[60px] h-[60px] object-contain" />
+        <Image src={img} alt="card title Image showing a unique icon related to title" width={1000} height={1000}    className=" align-start w-[60px] h-[60px] object-contain" />
       </div>
         <div className="content mt-4 leading-normal">
             <h3 className="text-[2rem] poppins font-[500] sub-txt leading-normal pb-4">{heading}</h3>

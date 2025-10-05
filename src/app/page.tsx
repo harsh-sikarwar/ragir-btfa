@@ -19,8 +19,12 @@ export default function Home() {
   return (
     <>  
     <Header />
-    <main className="px-[4rem] relative w-full overflow-hidden">
+    <main className="px-[4rem] relative w-full overflow-hidden max-w-[1400px] mx-auto">
+      {/* Hero Section */}
       <Hero />
+
+
+      {/* We are here to Offer you */}
       <Section heading="We are here to Offer you" child={
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem] max-md:justify-center mt-8">
           <Card 
@@ -50,6 +54,8 @@ export default function Home() {
           />
         </div>
         } />
+
+      {/* How It Works */}
       <Section heading="How It Works" child= {
           <div className="flex flex-col items-center justify-center">
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-[80%]">
@@ -78,6 +84,9 @@ export default function Home() {
           </div>
        
       }/>
+
+
+      {/* More About Ragir */}
       <Section heading={<>More About <span className='grad_txt'>Ragir</span></>} child= {
         <>
         <p className="text-[2rem] barlow font-[550] italic text-center sub-txt opacity-80 mb-[4rem]"> Ragir is the only one in India! That...</p>
@@ -97,6 +106,8 @@ export default function Home() {
         </div>
         </>
       }/> 
+
+      {/* Why Travelers Choose Ragir */}
       <Section heading="Why Travelers Choose Ragir" child={
         <>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
@@ -112,6 +123,8 @@ export default function Home() {
         
         
       }/>
+
+      {/* When travelers choose Ragir, they choose you! Banner section*/}
       <Section heading={<>When travelers choose <span className="grad_txt">Ragir</span>, they <br /><span className="grad_txt">choose you!</span></>} child={ 
         <div className="banner_section mt-[5rem] w-full min-h-[400px] flex max-md:justify-center align-center rounded-[3rem] px-8 py-8 bg-[url('/banner.png')] bg-cover bg-center">
           <div className="w-[90%] max-md:mx-auto md:w-[60%] rounded-[2rem] border border-white py-6 px-8 h-[calc(100%-4rem)] bg-[rgba(0,0,0,0.3)] backdrop-blur-[5px] ">
@@ -121,7 +134,7 @@ export default function Home() {
             <p className="text-[1.5rem] text-white py-[2rem]">Get started today and be discovered by millions of eager travelers</p>
             <button className="bg-white group rounded-full px-6 py-[0.8rem] text-[1rem] flex items-center gap-2 transition-all duration-500">
              <span className="group-hover:opacity-0 transition-all duration-300 text-[1.25rem] font-[500]"> Join as Partner</span>  
-              <BsArrowRight className="inline-block group-hover:block group-hover:translate-x-[-3rem] transition-all duration-500 group-hover:scale-x-150" size={24} />
+              <BsArrowRight className="inline-block group-hover:block group-hover:translate-x-[-5rem] transition-all duration-500 group-hover:scale-x-150" size={24} />
             </button>
           </div>
         </div>
