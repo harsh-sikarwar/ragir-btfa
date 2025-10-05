@@ -1,103 +1,133 @@
 import Image from "next/image";
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Section from "./components/Section";
+import Card from "./components/Card";
+import Content from "./components/how_it_works/Content";
+import Feature from "./components/more_about_ragir/Feature";
+import Tile from "./components/why_choose_ragir/Tile";
+import { BsArrowRight } from "react-icons/bs";
 
+/**
+ * Home Page Component
+ * Main landing page for Ragir platform
+ * Showcases services, how it works, features, and call-to-action
+ */
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>  
+    <Header />
+    <main className="px-[4rem] relative w-full overflow-hidden">
+      <Hero />
+      <Section heading="We are here to Offer you" children={
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <Card 
+          heading="Community Growth" 
+          img="/community.png" 
+          listItems={["Grow your travel community on a platform built exclusively for organized group trips",
+            "Be discovered by travelers searching for destination, budget, dates, and activities that you provide.",
+          ]}
+          />
+          <Card 
+          heading="Savings On Marketing Cost" 
+          img="/savings.png" 
+          listItems={[
+            "Save costs on marketing let Ragir bring the audience to you.",
+            "Boost your appearance with Ragir's advanced search filters.",
+             "Stand out with reviews and community presence that builds trust."
+            ]}
+          />
+          <Card 
+          heading="Analytics That Matter" 
+          img="/analytics.png" 
+          listItems={[
+            "See what travelers want, when, and at what price.",
+            "Access market trends and demand forecasts.",
+            "Turn traveler search trends into smarter trip planning."
+          ]}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        } />
+      <Section heading="How It Works" children= {
+          <div className="flex flex-col items-center justify-center">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-[80%]">
+              {/* Step 1 */}
+              <div className="px-6 order-1">
+                <Image src="/hiw-1.png" alt="How It Works Image" width={2000} height={1000} className="w-full"/>
+              </div>
+              <Content Heading="Create Account" content="Quick and seamless organizer account creation" direction="right" optional="order-2" />
+             {/* Step 2 */}
+              <Content Heading="List Trips " content="List your organized group trips and appear in traveler searches instantly" direction="left" optional="max-sm:order-4 order-3" />
+              <div className="px-6 max-sm:order-3 order-4">
+                <Image src="/hiw-2.png" alt="How It Works Image" width={2000} height={1000} className="w-full"/>
+              </div>
+              {/* Step 3 */}
+               <div className="px-6 order-5">
+                <Image src="/hiw-3.png" alt="How It Works Image" width={2000} height={1000} className="w-full"/>
+              </div>
+              <Content Heading="Convert" content="View leads and convert them into confirmed bookings" direction="right" optional="order-6" />
+             {/* Step 4 */}
+              <Content Heading="Grow" content="Use Ragir Analytics for smarter group trip planning" direction="left" optional="order-7 max-sm:order-8" />
+              <div className="px-6 order-8 max-sm:order-7">
+                <Image src="/hiw-4.png" alt="How It Works Image" width={2000} height={1000} className="w-full"/>
+              </div>
+             </div>
+
+          </div>
+       
+      }/>
+      <Section heading={<>More About <span className='grad_txt'>Ragir</span></>} children= {
+        <>
+        <h2 className="text-[1.75rem] text-gray-500 font-[500] text-center text-gray-500 mb-[4rem]"> Ragir is the only one in India! That...</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <Feature img="/mar-group.png" 
+          title="enables you to list your group trips on a platform dedicated to fixed departure group trips."
+           description="So that your every seat is booked on time" />
+          <Feature img="/mar-travel.png" 
+          title="enables travelers to search and filter group trips based on the experience parted during the trip." 
+          description="Because it’s not just about the destination, it’s the memories we make there" />
+          <Feature img="/mar-insights.png" 
+          title="provides you access to data and insights of traveler behavior and market trends."
+           description="So that you know what travelers’ actually want" />
+          <Feature img="/mar-trust.png" 
+          title="puts your brand identity at the forefront."
+           description="Because travelers are not just looking for trips, they are looking for brands they can trust" />
+        </div>
+        </>
+      }/> 
+      <Section heading="Why Travelers Choose Ragir" children={
+        <>
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
+          <Image src="/travellers-ragir.png" alt="Why Travelers Choose Ragir" width={2000} height={1000} className="w-[80%] max-md:mx-auto md:w-full"/>
+          <div className="flex flex-col justify-center">
+            <Tile img="/wcr-search.png" title="Simple, clutter-free search to find the right group trips" />
+            <Tile img="/wcr-fitler.png" title="Filter by destination, moods, budget and duration" />
+            <Tile img="/wcr-file.png" title="Transparent view of all organizer options" />
+            <Tile img="/wcr-community.png" title="Community driven reviews" />
+          </div>
+        </div>
+        </>
+        
+        
+      }/>
+      <Section heading={<>When travelers choose <span className="grad_txt">Ragir</span>, they <br /><span className="grad_txt">choose you!</span></>} children={ 
+        <div className="banner_section mt-[5rem] w-full min-h-[400px] flex max-md:justify-center align-center rounded-[3rem] px-8 py-8 bg-[url('/banner.png')] bg-cover bg-center">
+          <div className="w-[90%] max-md:mx-auto md:w-[60%] rounded-[2rem] border border-white py-6 px-8 h-[calc(100%-4rem)] bg-[rgba(0,0,0,0.3)] backdrop-blur-[5px] ">
+            <h1 className="text-[4.5rem] font-[700] text-white h-full">
+              Join the Moment
+            </h1>
+            <p className="text-[1.5rem] text-white py-[2rem]">Get started today and be discovered by millions of eager travelers</p>
+            <button className="bg-white group rounded-full px-6 py-[0.8rem] text-[1rem] flex items-center gap-2 transition-all duration-500">
+             <span className="group-hover:opacity-0 transition-all duration-300 text-[1.25rem] font-[500]"> Join as Partner</span>  
+              <BsArrowRight className="inline-block group-hover:block group-hover:translate-x-[-3rem] transition-all duration-500 group-hover:scale-x-150" size={24} />
+            </button>
+          </div>
+        </div>
+      } />
+    </main>
+    <Footer />
+    </>
   );
 }
