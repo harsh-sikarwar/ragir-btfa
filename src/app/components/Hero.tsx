@@ -28,7 +28,7 @@ digital partner to build community and maximize growth.</span>
 get lifetime perks of being our Day 1s
 </h2>
 <div className="max-lg:justify-center flex">
-    <Link href="/">
+    <Link href="/trivial">
     {/* Intentionaly left empty, content set by css for that gradeint text*/}
         <button className="btn text-[1.5rem] rounded-full font-[500] px-6 py-3 mt-8 poppins"></button>
     </Link>
