@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -13,7 +15,7 @@ export default function Header(): React.JSX.Element {
     <header className=" py-[1.2rem] px-[4rem] shadow_box_bottom">
       <nav className="flex justify-between items-center">
         <Link href="/" className="font-bold">
-          <Image src='/logo.svg' width={100} height={100} alt="Logo" className="hidden md:block" />
+          <Image src='/logo-ragir.svg' width={100} height={100} alt="Logo" className="hidden md:block" />
           <Image src='/mobileLogo.svg' width={100} height={100} alt="Logo" className="md:hidden" />
         </Link>
         <Link href="/">
@@ -22,6 +24,19 @@ export default function Header(): React.JSX.Element {
         </button>
         </Link>
       </nav>
+
+      {/* Theme toggle button (pending) */}
+      {/* <button type="button" 
+      onClick={() => {
+        const root = document.documentElement;
+        const current = root.dataset.theme;
+        const next = current === 'dark' ? 'light' : 'dark';
+        if (current === next) return;
+        root.dataset.theme = next;
+        try {
+          localStorage.setItem('theme', next);
+        } catch {}
+      }} className="rounded-full px-4 py-2 border border-border text-foreground bg-card">click</button> */}
     </header>
   );
 }

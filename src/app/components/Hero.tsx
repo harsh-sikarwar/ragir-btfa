@@ -13,7 +13,7 @@ export default function Hero(): React.JSX.Element {
 
 <div className="md:w-[180%] max-lg:mt-[5rem] lg:w-full z-1">
 
-<h2 className="text-[2.15rem] font-[500] pt-4">We’ve got an offer you’ll love 💖</h2>
+<h2 className="text-[2.15rem] font-[500] pt-4">We’ve got an offer you’ll love 🧡</h2>
 <p className="text-[1.25rem] font-[400] sub-txt opacity-80 pt-4">
     At Ragir, we are launching a platform that <span className="font-[600] italic sub-txt tracking-[0.15%]">(exclusively)</span> lists fixed departure
 group trips.

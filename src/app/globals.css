@@ -27,18 +27,6 @@ button.theme_btn_1{
   font-family: var(--font-poppins);
 }
 
-/* .content > h1{
-  font-family: var(--font-barlow);
-}
-
-h1 > span.bold{
-  font-weight: 700;
-
-}
-
-.content > p{
-  font-family: var(--font-poppins);
-} */
 
 .barlow{
   font-family: var(--font-barlow) !important;
@@ -96,6 +84,27 @@ h1 > span.bold{
   background-clip: text;
   color: transparent;
 }
+
+/* ===== Dark mode support () ===== */
+/* Let the browser know we support both color schemes for built-in UI */
+html { color-scheme: light dark; }
+
+
+/* Manual dark mode override via: document.documentElement.dataset.theme = 'dark' */
+:root[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #a1a1aa;
+  --card: #111111;
+  --border: #262626;
+}
+
+/* Utility classes to consume the CSS variables with Tailwind */
+.bg-background { background-color: var(--background) !important; }
+.text-foreground { color: var(--foreground) !important; }
+.text-muted { color: var(--muted, #666666) !important; }
+.bg-card { background-color: var(--card, #ffffff) !important; }
+.border-border { border-color: var(--border, #e4e4e4) !important; }
 
 .box-shadow{
   box-shadow: 0px 1px 25px 1px #E4E4E4
