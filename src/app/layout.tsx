@@ -18,7 +18,7 @@ const barlow = Barlow({
   display: "swap", // Improves loading performance
 });
 
-// Comprehensive SEO metadata
+// Comprehensive SEO metadata [AI Generated]
 export const metadata: Metadata = {
   title: {
     default: "Ragir - India's First Group Trip Platform",
@@ -71,10 +71,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-  },
+ 
 };
 
 export default function RootLayout({

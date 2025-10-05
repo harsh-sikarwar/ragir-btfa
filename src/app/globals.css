@@ -5,15 +5,6 @@
   --foreground: #171717;
 }
 
-/* Removed unused Geist font variables - using Poppins and Barlow only */
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 html {
   font-size: clamp(10px, 1.5vw, 16px);
 }
@@ -36,7 +27,7 @@ button.theme_btn_1{
   font-family: var(--font-poppins);
 }
 
-.content > h1{
+/* .content > h1{
   font-family: var(--font-barlow);
 }
 
@@ -47,7 +38,7 @@ h1 > span.bold{
 
 .content > p{
   font-family: var(--font-poppins);
-}
+} */
 
 .barlow{
   font-family: var(--font-barlow) !important;
@@ -104,4 +95,12 @@ h1 > span.bold{
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.box-shadow{
+  box-shadow: 0px 1px 25px 1px #E4E4E4
+}
+
+.sub-txt{
+  color: #333333;
 }

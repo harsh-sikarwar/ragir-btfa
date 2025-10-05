@@ -21,13 +21,13 @@ export default function Home() {
     <Header />
     <main className="px-[4rem] relative w-full overflow-hidden">
       <Hero />
-      <Section heading="We are here to Offer you" children={
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <Section heading="We are here to Offer you" child={
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[3rem] max-md:justify-center mt-8">
           <Card 
           heading="Community Growth" 
           img="/community.png" 
           listItems={["Grow your travel community on a platform built exclusively for organized group trips",
-            "Be discovered by travelers searching for destination, budget, dates, and activities that you provide.",
+            "Be discovered by travelers   searching for destination, budget, dates, and activities that you provide.",
           ]}
           />
           <Card 
@@ -50,7 +50,7 @@ export default function Home() {
           />
         </div>
         } />
-      <Section heading="How It Works" children= {
+      <Section heading="How It Works" child= {
           <div className="flex flex-col items-center justify-center">
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-[80%]">
               {/* Step 1 */}
@@ -78,9 +78,9 @@ export default function Home() {
           </div>
        
       }/>
-      <Section heading={<>More About <span className='grad_txt'>Ragir</span></>} children= {
+      <Section heading={<>More About <span className='grad_txt'>Ragir</span></>} child= {
         <>
-        <h2 className="text-[1.75rem] text-gray-500 font-[500] text-center text-gray-500 mb-[4rem]"> Ragir is the only one in India! That...</h2>
+        <p className="text-[2rem] barlow font-[550] italic text-center sub-txt opacity-80 mb-[4rem]"> Ragir is the only one in India! That...</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <Feature img="/mar-group.png" 
           title="enables you to list your group trips on a platform dedicated to fixed departure group trips."
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
         </>
       }/> 
-      <Section heading="Why Travelers Choose Ragir" children={
+      <Section heading="Why Travelers Choose Ragir" child={
         <>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
           <Image src="/travellers-ragir.png" alt="Why Travelers Choose Ragir" width={2000} height={1000} className="w-[80%] max-md:mx-auto md:w-full"/>
@@ -112,7 +112,7 @@ export default function Home() {
         
         
       }/>
-      <Section heading={<>When travelers choose <span className="grad_txt">Ragir</span>, they <br /><span className="grad_txt">choose you!</span></>} children={ 
+      <Section heading={<>When travelers choose <span className="grad_txt">Ragir</span>, they <br /><span className="grad_txt">choose you!</span></>} child={ 
         <div className="banner_section mt-[5rem] w-full min-h-[400px] flex max-md:justify-center align-center rounded-[3rem] px-8 py-8 bg-[url('/banner.png')] bg-cover bg-center">
           <div className="w-[90%] max-md:mx-auto md:w-[60%] rounded-[2rem] border border-white py-6 px-8 h-[calc(100%-4rem)] bg-[rgba(0,0,0,0.3)] backdrop-blur-[5px] ">
             <h1 className="text-[4.5rem] font-[700] text-white h-full">
