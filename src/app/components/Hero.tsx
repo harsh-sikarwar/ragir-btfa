@@ -36,14 +36,14 @@ get lifetime perks of being our Day 1s
 </div>
     </div>
     <div className="image max-md:mt-[7rem] ">
-    <Image src="/hero.png" alt="Hero Image in which a looking for destination" width={4000} height={2000} className=" z-[-1] md:absolute w-[80%] max-md:mx-auto md:w-[55%] lg:w-[45%] top-40 right-0"/>
+    <Image src="/hero-1.jpg" alt="Hero Image in which a looking for destination" width={4000} height={2000} className=" z-[-1] md:absolute w-[80%] max-md:mx-auto md:w-[55%] lg:w-[45%] top-40 right-0"/>
     </div>
     </section>
 
 {/* Intro Section */}
     <section className="intro_section w-full grid grid-cols-1 md:grid-cols-2 gap-4 mt-[5rem]">
         <div className="img">
-        <Image src="/intro-hero.png" alt="Image showing travellers having fun" width={2412} height={1996} className="w-8/9"/>
+        <Image src="/intro-hero.webp" alt="Image showing travellers having fun" width={2412} height={1996} className="w-8/9"/>
         </div>
         <div className="content max-md:text-center">
             <h1 className="text-[4.5rem] font-[700] pb-4 ">What is <span className="grad_txt"> Ragir?</span></h1>

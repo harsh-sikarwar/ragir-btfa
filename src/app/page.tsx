@@ -111,7 +111,7 @@ export default function Home() {
       <Section heading="Why Travelers Choose Ragir" child={
         <>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-8">
-          <Image src="/travellers-ragir.png" alt="Why Travelers Choose Ragir" width={2000} height={1000} className="w-[80%] max-md:mx-auto md:w-full"/>
+          <Image src="/travellers-ragir.webp" alt="Why Travelers Choose Ragir" width={2000} height={1000} className="w-[80%] max-md:mx-auto md:w-full"/>
           <div className="flex flex-col justify-center">
             <Tile img="/wcr-search.png" title="Simple, clutter-free search to find the right group trips" />
             <Tile img="/wcr-fitler.png" title="Filter by destination, moods, budget and duration" />
@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* When travelers choose Ragir, they choose you! Banner section*/}
       <Section heading={<>When travelers choose <span className="grad_txt">Ragir</span>, they <br /><span className="grad_txt">choose you!</span></>} child={ 
-        <div className="banner_section mt-[5rem] w-full min-h-[400px] flex max-md:justify-center align-center rounded-[3rem] px-8 py-8 bg-[url('/banner.png')] bg-cover bg-center">
+        <div className="banner_section mt-[5rem] w-full min-h-[400px] flex max-md:justify-center align-center rounded-[3rem] px-8 py-8 bg-[url('/banner.jpg')] bg-cover bg-center">
           <div className="w-[90%] max-md:mx-auto md:w-[60%] rounded-[2rem] border border-white py-6 px-8 h-[calc(100%-4rem)] bg-[rgba(0,0,0,0.3)] backdrop-blur-[5px] ">
             <h1 className="text-[4.5rem] font-[700] text-white h-full">
               Join the Moment
